@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{useState,useEffect} from 'react';
+
 import './App.css';
+import { getRandom } from './unsplash/api';
+import Home from './container/home';
+import Footer from './components/Footer';
+
 
 function App() {
+  const [random, setRandom] = useState("");
+
+  useEffect(() => {
+    getRandom().then(res=>{
+      setRandom(res);
+    });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App-header " >
+         <div className="homeContainer clip-path" style={{backgroundImage:`url("${random}")`}}>
+           
+         </div>
+         <Home/>
+         
       </header>
+      <Footer/>
     </div>
   );
 }
