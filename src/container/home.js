@@ -34,14 +34,14 @@ export default class Home extends Component {
     closeModal=()=>{
         this.setState({showModal:false});
     }
-    current=(url)=>{
-        this.setState({cur:url,showModal:true})
+    current=(url,details)=>{
+        this.setState({cur:url,curDetails:details,showModal:true})
     }
     render() {
         return (
             <div className="home">
                 {
-                    this.state.showModal && <Modal onClose={this.closeModal} image={this.state.cur}/>
+                    this.state.showModal && <Modal onClose={this.closeModal} imageDetails={this.state.curDetails} image={this.state.cur}/>
                 }
                 <Header/>
                 <SearchBar onSubmit={this.submit}/>

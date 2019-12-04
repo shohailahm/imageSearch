@@ -15,20 +15,29 @@
     flex-direction: row;
 }
 a{
-    width: 40%;
+ 
     margin-top:5%;
+    margin-left:10%;
 }
 
 .ft-content{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 10px 10px;
-    width:30%
+    margin: 10px 8%;
+    width:50%
 }
 .footerTags{
-    width: 80%;
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap:2px;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-gap:0px;
+}
+ul {
+    columns: 3;
+}
+li{
+    color: gold;
+    list-style-type: none;
+    margin: 5px 0;
 }

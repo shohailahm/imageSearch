@@ -4,8 +4,8 @@ import './imagelist.css';
 
 export default class ImageList extends Component {
     
-    open=(url)=>{
-        this.props.onOpen(url);
+    open=(url,details)=>{
+        this.props.onOpen(url,details);
     }
 
     render() {
@@ -13,7 +13,7 @@ export default class ImageList extends Component {
         return (
             <div className="listImages">{
                    images.length>1 && images.map((image,ind)=>(   
-                   <ImageComponent clickable key={image.id} imgUrl={image && image.urls && image.urls.regular} onOpen={this.open}/>
+                   <ImageComponent clickable key={image.id} imgUrl={image && image.urls && image.urls.regular} onOpen={this.open} imageDetails={image}/>
                    ))
                 }
                 

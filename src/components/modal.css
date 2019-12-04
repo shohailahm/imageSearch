@@ -19,6 +19,7 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
+    position: relative;
   }
   .modal-content a {
       display: block;
@@ -26,10 +27,18 @@
   
   /* The Close Button */
   .close {
-    color: #aaa;
+    color: #fff;
     float: right;
     font-size: 28px;
     font-weight: bold;
+    position: absolute;
+    top: -18px;
+    right: -10px;
+    background-color: #02bad6;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    line-height: 24px;
   }
   
   .close:hover,
@@ -42,3 +51,22 @@
     display:flex;
     justify-content:center;
   }
+  .avatar-container{
+   display: flex;
+   flex-direction: row;
+   margin:0 0 0 10%;
+  }
+  .avatar{
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+  }
+  .avatar-container p{
+    font-size: 14px;
+    margin-top: -4px;
+  }
+
+ .bottom{
+   margin: 0;
+   padding: 0;
+ }

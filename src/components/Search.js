@@ -22,7 +22,7 @@ class SearchBar extends React.Component {
           <div className="tags">
               <h5 style={{color:'#fff'}}>Searches: </h5>
               {
-                  tags.map((tag)=>(<Tag tag={tag} clickable onClickTag={this.onClicktag}></Tag>))
+                  tags.map((tag)=>(<Tag tag={tag} key={tag} clickable onClickTag={this.onClicktag}></Tag>))
               }
           </div>
         <form onSubmit={this.onFormSubmit} className="uiform">
