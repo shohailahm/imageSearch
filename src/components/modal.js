@@ -15,9 +15,12 @@ export default class Modal extends Component {
             <div className="modal-content">
               <span className="close" onClick={this.close}>&times;</span>
               <ImageComponent imgUrl={this.props.image} height="400px"/>
-              <a href={this.props.image} download="new.jpeg" target="_blank">
+              <div className="center">
+              <a href={this.props.image} download="new.jpg" target="_blank">
                    <Button title={"Download"} onClick={this.onClick}/>
               </a>
+              </div>
+              
             </div>
           
           </div>
